@@ -1,0 +1,52 @@
+{
+ "args": {
+  "data": "/workspace/data/pg",
+  "arm": "paged",
+  "seed": 2,
+  "tokens": 60000000.0,
+  "table_params": 200000000.0,
+  "batch_tokens": 131072,
+  "micro": 32,
+  "seq": 1024,
+  "d": 384,
+  "layers": 6,
+  "heads": 6,
+  "every": 4,
+  "slots": 4,
+  "lr": 0.002,
+  "table_lr_mul": 70.0,
+  "wd": 0.1,
+  "warmup_frac": 0.05,
+  "decay_frac": 0.2,
+  "eval_every": 100,
+  "eval_tokens": 2097152,
+  "compile": 1,
+  "out": "/workspace/pg/runs/slots/paged/S4/s2"
+ },
+ "arm": "paged",
+ "kind": "paged",
+ "gate": "scalar",
+ "geometry": {
+  "kind": "paged",
+  "rows": 3124608,
+  "width": 64,
+  "heads": 8,
+  "slots": 4,
+  "pages": [
+   48823,
+   48821
+  ],
+  "params": 199974912
+ },
+ "core_params": 60953472,
+ "memory_dense_params": 393218,
+ "steps": 457,
+ "final_val_loss": 5.117128036916256,
+ "diverged": false,
+ "tok_s": 107108.21753828746,
+ "seconds": 592.9250869750977,
+ "peak_gib": 8.506673336029053,
+ "val_loss_nf4": 5.117534086108208,
+ "rows_touched_frac": 1.0,
+ "table_rms": 1.3387998342514038
+}

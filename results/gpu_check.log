@@ -1,0 +1,9 @@
+NVIDIA GeForce RTX 5090, 32607 MiB, 500.00 W, 600.00 W, 3105 MHz, 5, 16, 580.82.07
+under load:
+clocks.current.sm [MHz], clocks.current.memory [MHz], power.draw [W], temperature.gpu, pstate, clocks_event_reasons.active, clocks_event_reasons.sw_power_cap, clocks_event_reasons.hw_slowdown, clocks_event_reasons.hw_power_brake_slowdown, clocks_event_reasons.sw_thermal_slowdown
+2670 MHz, 13801 MHz, 500.04 W, 57, P1, 0x0000000000000004, Active, Not Active, Not Active, Not Active
+sustained BF16 GEMM 8192^3: 221 TFLOPS
+device copy: 1524 GB/s
+H2D pinned: 41.5 GB/s
+expect (healthy): PRO 6000 ~350+ TFLOPS BF16, ~1.5 TB/s copy, SM clock >2 GHz under load;
+                  RTX 5090 (400 W cap) ~220 TFLOPS, ~1.5 TB/s

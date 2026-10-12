@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pagegram"
+version = "1.0.0"
+description = "Page-local hashing for n-gram memory: harness, flash simulator and results"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Leon Lehmann", email = "lehmann@empero.org" }]
+dependencies = ["torch>=2.4", "numpy"]
+
+[project.urls]
+Homepage = "https://github.com/empero-org/pagegram"
+
+[tool.setuptools]
+packages = ["pagegram"]
+
+[tool.setuptools.package-data]
+pagegram = ["iosim.c"]

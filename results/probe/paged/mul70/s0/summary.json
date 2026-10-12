@@ -1,0 +1,51 @@
+{
+ "args": {
+  "data": "/workspace/data/pg",
+  "arm": "paged",
+  "seed": 0,
+  "tokens": 30000000.0,
+  "table_params": 200000000.0,
+  "batch_tokens": 131072,
+  "micro": 32,
+  "seq": 1024,
+  "d": 384,
+  "layers": 6,
+  "heads": 6,
+  "every": 4,
+  "lr": 0.002,
+  "table_lr_mul": 70.0,
+  "wd": 0.1,
+  "warmup_frac": 0.05,
+  "decay_frac": 0.2,
+  "eval_every": 50,
+  "eval_tokens": 2097152,
+  "compile": 1,
+  "out": "/workspace/pg/runs/probe/paged/mul70/s0"
+ },
+ "arm": "paged",
+ "kind": "paged",
+ "gate": "scalar",
+ "geometry": {
+  "kind": "paged",
+  "rows": 3121920,
+  "width": 64,
+  "heads": 8,
+  "slots": 15,
+  "pages": [
+   13009,
+   13007
+  ],
+  "params": 199802880
+ },
+ "core_params": 60953472,
+ "memory_dense_params": 393218,
+ "steps": 228,
+ "final_val_loss": 6.15960556268692,
+ "diverged": false,
+ "tok_s": 231779.39765449247,
+ "seconds": 145.27253460884094,
+ "peak_gib": 8.506002426147461,
+ "val_loss_nf4": 6.159913532435894,
+ "rows_touched_frac": 1.0,
+ "table_rms": 0.8637284636497498
+}

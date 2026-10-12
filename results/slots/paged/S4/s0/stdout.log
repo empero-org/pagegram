@@ -1,0 +1,7 @@
+{"step": 0, "tokens": 0, "val_loss": 11.17680150270462, "train_loss": null, "tok_s": null, "elapsed": 6.264983892440796}
+{"step": 100, "tokens": 13107200, "val_loss": 6.858417019248009, "train_loss": 7.041894539879386, "tok_s": 107230.43404591511, "elapsed": 134.11702370643616}
+{"step": 200, "tokens": 26214400, "val_loss": 6.077883705496788, "train_loss": 6.153205306199799, "tok_s": 107201.30992906018, "elapsed": 261.87003660202026}
+{"step": 300, "tokens": 39321600, "val_loss": 5.590759381651878, "train_loss": 5.563364614957167, "tok_s": 107189.18850098098, "elapsed": 389.6328966617584}
+{"step": 400, "tokens": 52428800, "val_loss": 5.183657944202423, "train_loss": 5.124731756851104, "tok_s": 107180.99718711477, "elapsed": 517.407279253006}
+{"step": 457, "tokens": 59899904, "val_loss": 5.009691528975964, "train_loss": 4.885296275696992, "tok_s": 107175.3974286136, "elapsed": 592.5960378646851}
+{"arm": "paged", "kind": "paged", "gate": "scalar", "geometry": {"kind": "paged", "rows": 3124608, "width": 64, "heads": 8, "slots": 4, "pages": [48823, 48821], "params": 199974912}, "core_params": 60953472, "memory_dense_params": 393218, "steps": 457, "final_val_loss": 5.009691528975964, "diverged": false, "tok_s": 107175.3974286136, "seconds": 592.5962510108948, "peak_gib": 8.506673336029053, "val_loss_nf4": 5.010139726102352, "rows_touched_frac": 1.0, "table_rms": 1.3429203033447266}

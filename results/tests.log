@@ -1,0 +1,31 @@
+geometry
+  PASS  flat, global and paged tables hold the same parameters (within 0.5%)   [flat 200.00M, global 199.90M, paged 199.80M]
+  PASS  the quarter table holds a quarter
+  PASS  global: 16 distinct prime table sizes
+addresses
+  PASS  flat: every address in range and in its region
+  PASS  global: every address in range and in its region
+  PASS  paged: every address in range and in its region
+  PASS  n-grams never reach back across an EOS
+initialisation
+  PASS  every arm's core equals the table-free model's for a seed
+  PASS  with the table at zero every arm computes the table-free loss, bitwise
+  PASS  another seed draws another core
+row optimizer
+  PASS  sparse table gradient == the dense reference   [max err 2.3e-10]
+/workspace/pagegram/pagegram/test_harness.py:133: UserWarning: Sparse invariant checks are implicitly disabled. Memory errors (e.g. SEGFAULT) will occur when operating on a sparse tensor which violates the invariants, but checks incur performance overhead. To silence this warning, explicitly opt in or out. See `torch.sparse.check_sparse_tensor_invariants.__doc__` for guidance.  (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:760.)
+  m.memory.table.grad = torch.sparse_coo_tensor(ids[None], gv, m.memory.table.shape)
+  PASS  row-RMS update and its replayed decay == the hand-computed rule
+4-bit readout
+  PASS  NF4: zero rows stay zero, error within half the widest level gap   [max rel err 0.152]
+flash simulator
+  PASS  paged: the C page ids == the model's addresses, every token
+  PASS  global: the C page ids == the model's addresses, every token
+gpu runs
+  PASS  none: 20 steps train, evaluate and summarise   [val 11.163, 216,547 tok/s, peak 7.8 GiB]
+  PASS  flat: 20 steps train, evaluate and summarise   [val 11.214, 213,788 tok/s, peak 8.3 GiB]
+  PASS  global: 20 steps train, evaluate and summarise   [val 11.261, 211,035 tok/s, peak 8.5 GiB]
+  PASS  paged: 20 steps train, evaluate and summarise   [val 11.255, 211,115 tok/s, peak 8.5 GiB]
+  PASS  paged_ctx: 20 steps train, evaluate and summarise   [val 11.248, 226,476 tok/s, peak 8.2 GiB]
+
+20/20 passed
